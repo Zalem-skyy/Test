@@ -1,0 +1,12 @@
+name: Greeting Workflow
+on: [push] # Trigger this when code is pushed
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Run a script
+        run: echo "Hello! Your workflow is running successfully."
